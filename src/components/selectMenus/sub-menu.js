@@ -1,10 +1,11 @@
 module.exports = {
   data: {
-    name: `sub-yt`,
+    name: "sub-menu",
   },
   async execute(interaction, client) {
     await interaction.reply({
-      content: process.env.YT_URL,
+      content: `To select: ${interaction.values[0]}`,
+      ephemeral: true,
     });
   },
 };
